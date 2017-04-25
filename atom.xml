@@ -1,28 +1,358 @@
----
-layout: null
----
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>{{ site.title }}</title>
- <link href="{{ site.url }}/atom.xml" rel="self"/>
- <link href="{{ site.url }}/"/>
- <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.url }}</id>
+ <title></title>
+ <link href="/atom.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2017-04-25T11:28:52-04:00</updated>
+ <id></id>
  <author>
-   <name>{{ site.author.name }}</name>
-   <email>{{ site.author.email }}</email>
+   <name></name>
+   <email></email>
  </author>
 
- {% for post in site.posts %}
+ 
  <entry>
-   <title>{{ post.title }}</title>
-   <link href="{{ site.url }}{{ post.url }}"/>
-   <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <title>Introducing chalk</title>
+   <link href="/posts/introducing-chalk"/>
+   <updated>2016-10-17T00:00:00-04:00</updated>
+   <id>/posts/introducing-chalk</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;/assets/documentation/chalk-intro@2x.png&quot; class=&quot;fluidbox-trigger&quot;&gt;
+  &lt;img src=&quot;/assets/documentation/chalk-intro.png&quot; alt=&quot;Chalk intro&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/nielsenramon/chalk&quot;&gt;Download Chalk here!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;features&quot;&gt;Features:&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Dark and Light theme.&lt;/li&gt;
+  &lt;li&gt;Filter on tags.&lt;/li&gt;
+  &lt;li&gt;Customizable pagination.&lt;/li&gt;
+  &lt;li&gt;Beautified link sharing in Facebook and other social media.&lt;/li&gt;
+  &lt;li&gt;Automatic time to read post indicator.&lt;/li&gt;
+  &lt;li&gt;Automatic RSS feed.&lt;/li&gt;
+  &lt;li&gt;About page.&lt;/li&gt;
+  &lt;li&gt;404 page.&lt;/li&gt;
+  &lt;li&gt;SEO optimized.&lt;/li&gt;
+  &lt;li&gt;PageSpeed optimized.&lt;/li&gt;
+  &lt;li&gt;Cross browser support (supports all modern browsers).&lt;/li&gt;
+  &lt;li&gt;Media embed for videos.&lt;/li&gt;
+  &lt;li&gt;Enlarge images on click.&lt;/li&gt;
+  &lt;li&gt;Support for local fonts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;integrations&quot;&gt;Integrations&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://analytics.google.com/analytics/web/&quot;&gt;Google Analytics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://fonts.google.com/&quot;&gt;Google Fonts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ionicons.com/&quot;&gt;Ionicons&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Social media links&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;used-tools&quot;&gt;Used tools&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/postcss/autoprefixer&quot;&gt;Autoprefixer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bower.io/&quot;&gt;Bower&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://circleci.com/&quot;&gt;Circle CI&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/gjtorikian/html-proofer&quot;&gt;Html-proofer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-assets&quot;&gt;Jekyll assets&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jekyll/jekyll-sitemap&quot;&gt;Jekyll Sitemap&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://html5boilerplate.com/&quot;&gt;HTML5 Boilerplate&lt;/a&gt; (Influenced by)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://kickster.nielsenramon.com/&quot;&gt;Kickster&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://imulus.github.io/retinajs/&quot;&gt;Retina.js&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stacss.nielsenramon.com/&quot;&gt;STACSS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/documentation/enlarge@2x.gif&quot; class=&quot;fluidbox-trigger&quot;&gt;
+  &lt;img src=&quot;/assets/documentation/enlarge.gif&quot; alt=&quot;Enlarge image feature&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;If you haven’t installed the following tools then go ahead and do so (make sure you have &lt;a href=&quot;http://brew.sh/&quot;&gt;Homebrew&lt;/a&gt; installed):&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;brew install ruby
+brew install npm&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;On windows, install Ruby and Node with the installers found here:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rubyinstaller.org/&quot;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Next setup your environment:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bin/setup&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;development&quot;&gt;Development&lt;/h2&gt;
+
+&lt;p&gt;Run Jekyll:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;deploy-to-github-pages&quot;&gt;Deploy to GitHub Pages&lt;/h2&gt;
+
+&lt;p&gt;Before you deploy, commit your changes to any working branch except the &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; one then run the following command:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;bin/deploy&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Important note&lt;/strong&gt;: Chalk does not support the standard way of Jekyll hosting on GitHub Pages. You need to deploy your working branch (can be any branch, for .github.io users: use another branch than master) with the &lt;code class=&quot;highlighter-rouge&quot;&gt;bin/deploy&lt;/code&gt; script. This is because Chalk uses Jekyll plugins that aren’t supported by GitHub pages. The &lt;code class=&quot;highlighter-rouge&quot;&gt;bin/deploy&lt;/code&gt; script will automatically build the entire project, then push it to the &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch of your repo. The script creates that branch for you so no need to create it yourself.&lt;/p&gt;
+
+&lt;p&gt;You can find more info on how to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;gh-pages&lt;/code&gt; branch and a custom domain &lt;a href=&quot;https://help.github.com/articles/quick-start-setting-up-a-custom-domain/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/nielsenramon/kickster#automated-deployment-with-circle-ci&quot;&gt;View this&lt;/a&gt; for more info about automated deployment with Circle CI.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you have any questions about using or configuring Chalk please create an issue &lt;a href=&quot;&quot; title=&quot;here&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
+</content>
  </entry>
- {% endfor %}
+ 
+ <entry>
+   <title>How to configure Chalk</title>
+   <link href="/posts/configuring-chalk"/>
+   <updated>2016-10-16T00:00:00-04:00</updated>
+   <id>/posts/configuring-chalk</id>
+   <content type="html">&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file is the most important one. It contains the basic setup of your project.
+Some parts are preconfigured and shouldn’t be touched as the comments state.
+Of course if you are familiar with Jekyll you can change whatever you want.&lt;/p&gt;
+
+&lt;p&gt;Note: You do not &lt;em&gt;have&lt;/em&gt; to change anything. Chalk works out of the box. I do recommend changing the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; to suit your needs.&lt;/p&gt;
+
+&lt;h3 id=&quot;mandatory-settings&quot;&gt;Mandatory settings&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Mandatory settings&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Chalk&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;paginate&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# add your site url (format: http://example.com/)&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;blog_theme&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;light&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Or use dark&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt;: Used as the page title and throughout your project as the default name.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;paginate&lt;/code&gt;: Define how much posts should be shown on the homepage for each page.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;url&lt;/code&gt;: Your production url (http://example.com).&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;blog_theme&lt;/code&gt;: 2 options here, &lt;code class=&quot;highlighter-rouge&quot;&gt;light&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;dark&lt;/code&gt;. Choose which design you prefer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;optional-settings&quot;&gt;Optional settings&lt;/h3&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Optional settings&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;about_enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Change to true if you wish to show an icon in the navigation that redirects to the about page&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;discus_identifier&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add your Disqus identifier&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;ga_analytics&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add your GA Tracking Id&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;local_fonts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Change to true if you wish to use local fonts&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;rss_enabled&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Change to false if not&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;social&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;dribbble&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add your Dribbble handle&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;facebook&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add your Facebook handle&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;flickr&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add your Flickr handle&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add your GitHub handle&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;linkedin&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add your LinkedIn handle&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;twitter&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add your Twitter handle&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add your Email address&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;bitcoin&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add your Bitcoin link or address&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;about_enabled&lt;/code&gt;: If you wish to put the about page link in the top navigation in between the social icons set to true.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;discus_identifier&lt;/code&gt;: If you like to use Disqus for comments on each blog post, you can add the Disqus identifier here and it will popup automatically.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ga_analytics&lt;/code&gt;: Add Google Analytics Tracking ID here.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;local_fonts&lt;/code&gt;: By default Chalk uses Google Fonts but if you wish to use local fonts this is the fallback.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rss_enabled&lt;/code&gt;: When set to &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;, the rss icon in the top navigation will show up and people will be able to subscribe to your rss feed.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;social&lt;/code&gt;: Add you social links in here. When filled in they will show up in the navigation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;other-settings&quot;&gt;Other settings&lt;/h3&gt;
+
+&lt;p&gt;Other than the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; you can change a lot more in the project.&lt;/p&gt;
+
+&lt;h4 id=&quot;tags&quot;&gt;Tags&lt;/h4&gt;
+
+&lt;p&gt;To add tags you must add a file with the tag name in &lt;code class=&quot;highlighter-rouge&quot;&gt;_my_tags&lt;/code&gt;.
+In the file you add 2 variables: &lt;code class=&quot;highlighter-rouge&quot;&gt;slug&lt;/code&gt; used to reference the tag and &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt; which is displayed in the article header.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yml&quot; data-lang=&quot;yml&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# _my_tags/design.md&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;slug&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;design&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Design&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;scss&quot;&gt;SCSS&lt;/h4&gt;
+
+&lt;p&gt;You can change colors, fonts, sizes in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_assets/stylesheets/_variables.scss&lt;/code&gt; file.
+For each specific theme (light or dark) you can change the variables in &lt;code class=&quot;highlighter-rouge&quot;&gt;_assets/stylesheets/dark.scss&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_assets/stylesheets/light.scss&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// =============================================================================
+// Variables
+// =============================================================================
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Typography
+// =============================================================================
+&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$sans-serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Lato&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Helvetica&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Arial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sans-serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Cormorant Garamond&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Courier&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$base-font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$sans-serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$base-font-weight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$base-font-weight-bold&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;700&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Colors
+// =============================================================================
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Brand colors
+&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$brand-success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#1fbf92&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$brand-danger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#e74b3c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$brand-primary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#3449ed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$brand-warning&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#f1c90b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Sizes
+// =============================================================================
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Grid
+&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$max-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;650px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$gutter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$one-column&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$columns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$negative-gutter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$gutter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Font sizes
+&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$base-font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;16px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$base-line-height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Box sizes
+&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$base-border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Effects
+// =============================================================================
+&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$base-transition-speed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;.2s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;fonts&quot;&gt;Fonts&lt;/h4&gt;
+
+&lt;p&gt;Chalk uses Google Fonts by default. You can change the font in &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/javascripts.html&lt;/code&gt; and in &lt;code class=&quot;highlighter-rouge&quot;&gt;404.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;WebFont&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;google&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;families&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Cormorant Garamond:700'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Lato:300,400,700'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Don’t forget Chalk also support local fonts if enabled in &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt;!&lt;/p&gt;
+
+&lt;h4 id=&quot;footer&quot;&gt;Footer&lt;/h4&gt;
+
+&lt;p&gt;Changing the text in the footer is easy. It can be found in &lt;code class=&quot;highlighter-rouge&quot;&gt;_includes/footer.html&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you have any questions about using or configuring Chalk please create an issue &lt;a href=&quot;&quot; title=&quot;here&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Chalk sample post with all elements</title>
+   <link href="/posts/chalk-sample-post-with-all-elements"/>
+   <updated>2016-10-15T00:00:00-04:00</updated>
+   <id>/posts/chalk-sample-post-with-all-elements</id>
+   <content type="html">&lt;p&gt;Chalk uses the default Jekyll syntax highlighting gem Rouge. It has a customized style for both light and dark theme.
+Use the &lt;code class=&quot;highlighter-rouge&quot;&gt;highlight&lt;/code&gt; tag to use the following code highlighting your preferred language:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- This is a comment --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;grid&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;This is a heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;
+    This is a paragraph text.
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;headings&quot;&gt;Headings&lt;/h2&gt;
+
+&lt;p&gt;Chalk includes 3 headings by default:&lt;/p&gt;
+
+&lt;h2 id=&quot;heading-first-level&quot;&gt;Heading first level&lt;/h2&gt;
+&lt;h3 id=&quot;heading-second-level&quot;&gt;Heading second level&lt;/h3&gt;
+&lt;h4 id=&quot;heading-third-level&quot;&gt;Heading third level&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;gu&quot;&gt;## Heading first level&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;### Heading second level&lt;/span&gt;
+&lt;span class=&quot;gu&quot;&gt;#### Heading third level&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;lists&quot;&gt;Lists&lt;/h2&gt;
+
+&lt;p&gt;Unordered list example:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Unordered list item 1&lt;/li&gt;
+  &lt;li&gt;Unordered list item 2&lt;/li&gt;
+  &lt;li&gt;Unordered list item 3&lt;/li&gt;
+  &lt;li&gt;Unordered list item 4&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ordered list example:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Ordered list item 1&lt;/li&gt;
+  &lt;li&gt;Ordered list item 1&lt;/li&gt;
+  &lt;li&gt;Ordered list item 1&lt;/li&gt;
+  &lt;li&gt;Ordered list item 1&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; Unordered list item 1
+&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt; Unordered list item 2
+&lt;span class=&quot;p&quot;&gt;
+1.&lt;/span&gt; Order list item 1
+&lt;span class=&quot;p&quot;&gt;2.&lt;/span&gt; Order list item 1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;emoji-support-star&quot;&gt;Emoji support :star:&lt;/h2&gt;
+
+&lt;p&gt;Emoji’s can be used everywhere in :cat2: your markdown!&lt;/p&gt;
+
+&lt;h2 id=&quot;quotes&quot;&gt;Quotes&lt;/h2&gt;
+
+&lt;p&gt;A quote looks like this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-markdown&quot; data-lang=&quot;markdown&quot;&gt;&lt;span class=&quot;gt&quot;&gt;&amp;gt; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor&lt;/span&gt;
+incididunt ut labore et dolore magna.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;media&quot;&gt;Media&lt;/h2&gt;
+
+&lt;p&gt;Images can be added with a default &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tag.
+If you wish that an image can be enlarged on click use the image include tag. You can pass 3 variables:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt;: Image to show in the blog post.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;path-detail&lt;/code&gt;: Image to show when enlarging.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;alt&lt;/code&gt;: Alt text for image in blog post.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/documentation/sample-image@2x.jpg&quot; class=&quot;fluidbox-trigger&quot;&gt;
+  &lt;img src=&quot;/assets/documentation/sample-image.jpg&quot; alt=&quot;Sample image&quot; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/documentation/sample-image@2x.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fluidbox-trigger&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/documentation/sample-image.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Sample image&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Videos can be added and are responsive by default (4x3 by default, 16x9 with extra class).&lt;/p&gt;
+
+&lt;div class=&quot;embed-responsive embed-responsive-16by9&quot;&gt;
+&lt;iframe src=&quot;https://www.youtube.com/embed/vO7m8Hre72E?modestbranding=1&amp;amp;autohide=1&amp;amp;showinfo=0&amp;amp;controls=0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;embed-responsive embed-responsive-16by9&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;url-to-video&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;frameborder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;allowfullscreen&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</content>
+ </entry>
+ 
 
 </feed>
